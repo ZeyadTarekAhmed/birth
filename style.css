@@ -1,0 +1,455 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    overflow-x:hidden;
+
+    background:linear-gradient(135deg,#ffb6d5,#ffd6ec,#fff);
+
+    min-height:100vh;
+
+    color:white;
+}
+
+/* Loader */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#ff7eb3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:.8s;
+}
+
+.gift-loader{
+
+    font-size:90px;
+
+    animation:bounce 1s infinite;
+}
+
+#loader h2{
+
+    margin-top:20px;
+
+    color:white;
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-25px);
+
+}
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:20px;
+
+position:relative;
+
+}
+
+.title{
+
+font-size:70px;
+
+font-weight:700;
+
+color:white;
+
+text-shadow:0 0 30px hotpink;
+
+}
+
+.title span{
+
+display:block;
+
+font-size:85px;
+
+color:#ff006a;
+
+margin-top:15px;
+
+}
+
+.subtitle{
+
+font-size:22px;
+
+margin:25px 0;
+
+color:white;
+
+}
+
+button{
+    display:inline-block;
+    margin-top:40px;
+    padding:18px 45px;
+    background:#ff006a;
+    color:white;
+    border:none;
+    border-radius:50px;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:1000;
+    position:relative;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(255,0,106,.4);
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff2d86;
+}
+button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 40px hotpink;
+
+}
+
+/* Glass */
+
+.message{
+
+padding:120px 10%;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.glass{
+
+width:850px;
+
+padding:50px;
+
+border-radius:30px;
+
+backdrop-filter:blur(18px);
+
+background:rgba(255,255,255,.18);
+
+border:1px solid rgba(255,255,255,.3);
+
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.glass h2{
+
+text-align:center;
+
+font-size:50px;
+
+margin-bottom:35px;
+
+}
+
+.glass p{
+
+font-size:22px;
+
+line-height:2;
+
+text-align:center;
+
+}
+
+/* Gallery */
+
+.gallery{
+
+padding:100px 8%;
+
+text-align:center;
+
+}
+
+.gallery h2{
+
+font-size:55px;
+
+margin-bottom:50px;
+
+color:white;
+
+}
+
+.photos{
+
+display:flex;
+
+gap:35px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.photo{
+
+overflow:hidden;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+transition:.5s;
+
+}
+
+.photo:hover{
+
+transform:translateY(-15px) scale(1.05);
+
+}
+
+.photo img{
+
+width:320px;
+
+height:430px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* Heart */
+
+.heartSection{
+
+padding:140px 20px;
+
+text-align:center;
+
+}
+
+#heart{
+
+font-size:130px;
+
+cursor:pointer;
+
+animation:pulse 1.3s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+#hiddenText{
+
+margin-top:40px;
+
+font-size:28px;
+
+display:none;
+
+line-height:2;
+
+}
+
+/* Footer */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+font-size:22px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+/* Floating Hearts */
+
+.floating-heart{
+
+position:fixed;
+
+font-size:30px;
+
+pointer-events:none;
+
+animation:floatUp 5s linear forwards;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-900px) scale(2);
+
+}
+
+}
+
+/* Balloons */
+
+.balloon{
+
+position:fixed;
+
+bottom:-150px;
+
+font-size:70px;
+
+animation:balloon 10s linear forwards;
+
+}
+
+@keyframes balloon{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-130vh);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.title{
+
+font-size:45px;
+
+}
+
+.title span{
+
+font-size:55px;
+
+}
+
+.glass{
+
+padding:30px;
+
+}
+
+.glass h2{
+
+font-size:36px;
+
+}
+
+.glass p{
+
+font-size:18px;
+
+}
+
+.photo img{
+
+width:280px;
+
+height:360px;
+
+}
+
+#heart{
+
+font-size:90px;
+
+}
+
+}
